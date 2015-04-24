@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'pins#index'
 
+  get 'pins/name-:slug' => 'pins#show_by_name', as: 'pin_by_name'
   resources :pins
+  
     
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -14,6 +16,7 @@ Rails.application.routes.draw do
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
+
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
