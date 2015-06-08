@@ -25,3 +25,52 @@ hr{
 body{
   background: url(asset-path('laptop-background.jpg')) no-repeat;
 }
+
+#pin_form  {
+  position: absolute;
+  top: 130px;
+  font-family: 'Indie Flower';
+  font-size: 16px;
+  color: #dd5566;
+  border: solid 3px white;
+  border-radius: 5px;
+  padding: 20px 30px 5px;
+  width: 1150px;
+  height: 120px;
+}
+
+#button_new  {
+  color: #dd5566;
+  font-family: 'crushed';
+  font-size: 22px;
+  position: relative;
+  top: 70px;
+  right: 10px;
+}
+
+#button_edit  {
+  color: #dd5566;
+  font-family: 'crushed';
+  font-size: 22px;
+  position: relative;
+  top: 70px;
+  right: 10px;
+}
+
+#description  {
+ 
+}
+
+.error  {
+  color: #990033;
+  font-family: 'Crushed';
+  font-size: 24px;
+  text-decoration: underline;
+  position: relative;
+  top: 300px;
+  text-align: center;
+}
+
+.container  {
+  height: 100px;
+}

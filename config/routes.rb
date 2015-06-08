@@ -6,12 +6,14 @@ Rails.application.routes.draw do
   root 'pins#index'
 
   get 'pins/name-:slug' => 'pins#show_by_name', as: 'pin_by_name'
+  
+
   resources :pins
   
     
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-
+  
   get '/library' => 'pins#index'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)

@@ -38,4 +38,19 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # Location (which convert) of the convert program, which is the 
+  # ImageMagick command-line utility that Paperclip needs to access.
+  # Add locaton to config/environments/development.rb file
+  Paperclip.options[:command_path] = "/usr/local/bin/convert"
+
+  # Tell paperclip where to store the images.
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => "skillcrush-rails",
+      :access_key_id => "AKIAI4Y7CIUPPOFAYN2Q",
+      :secret_access_key => "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"
+    }
+  }
 end
