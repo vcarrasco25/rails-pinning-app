@@ -39,7 +39,9 @@ RSpec.describe PinsController do
         url: "http://railswizard.org", 
         slug: "rails-wizard", 
         text: "A fun and helpful Rails Resource",
-        category_id: "rails"}    
+        category_id: "rails",
+        image: "http://placebear.com/75/75"
+      }    
     end
     
     after(:each) do
@@ -92,7 +94,8 @@ RSpec.describe PinsController do
       @slug = "rails-wizard"
       @text = "A fun and helpful Rails Resource"
       @category_id = "rails"
-      @pin = Pin.create(title: @title, url: @url, slug: @slug, text: @text, category_id: @category_id)
+      @image = "http://placebear.com/75/75"
+      @pin = Pin.create(title: @title, url: @url, slug: @slug, text: @text, category_id: @category_id, image: @image)
     end
 
     after(:each) do
@@ -105,7 +108,7 @@ RSpec.describe PinsController do
     #responds with success
     it 'responds with successfully' do
       new_text = "just a Rails Resource"
-      get :edit, {id: @pin.id}, { title: @title, url: @url, slug: @slug, text: new_text, category_id: @category_id}
+      get :edit, {id: @pin.id}, { title: @title, url: @url, slug: @slug, text: new_text, category_id: @category_id, image: @image}
       expect(response.success?).to be(true)
     end
  
@@ -131,7 +134,8 @@ RSpec.describe PinsController do
       @slug = "rails-wizard"
       @text = "A fun and helpful Rails Resource"
       @category_id = "rails"
-      @pin = Pin.create(title: @title, url: @url, slug: @slug, text: @text, category_id: @category_id)
+      @image = "http://placebear.com/75/75"
+      @pin = Pin.create(title: @title, url: @url, slug: @slug, text: @text, category_id: @category_id, image: @image)
     end
 
     after(:each) do
@@ -153,7 +157,7 @@ RSpec.describe PinsController do
     #updates a pin
     it 'updates a pin when a POST request is sent to pins/:id' do
       new_text = "Warlocking to learn Rails"
-      post :update, {id: @pin.id, pin: { title: @title, url: @url, slug: @slug, text: new_text, category_id: @category_id}}
+      post :update, {id: @pin.id, pin: { title: @title, url: @url, slug: @slug, text: new_text, category_id: @category_id, image: @image}}
       expect(@pin.reload.text==new_text).to be(true)
     end
 
