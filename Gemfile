@@ -53,7 +53,7 @@ gem 'rails_12factor'
 #which stands out nicely if your terminal background is dark.
 gem 'whiny_validation'
 
-ruby '2.2.1'
+ruby '2.2.3'
 
 gem 'paperclip'
 
