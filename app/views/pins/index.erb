@@ -17,13 +17,13 @@
                   <div class="logo-thumbnail col-xs-3">
                     
                     <% if "#{pin.category.name}" == "rails" %>
-                      <% if "#{pin.image}".nil? == "false" %>
+                      <% if "#{pin.image.url}".nil? == "false" %>
                         <img src="<%= pin.image.url(:thumb) %>">
                       <% else %>
                         <%= image_tag('rails-logo-thumbnail.png') %>
                       <% end %>
                     <% else "#{pin.category.name}" == "ruby" %>
-                      <% if "#{pin.image}".nil? == "false" %>
+                      <% if "#{pin.image.url}".nil? == "false" %>
                         <img src="<%= pin.image.url(:thumb) %>">
                       <% else %>
                         <%= image_tag('ruby-logo-thumbnail.png') %>
