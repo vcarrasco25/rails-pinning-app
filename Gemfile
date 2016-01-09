@@ -59,4 +59,3 @@ gem 'paperclip'
 
 gem 'aws-sdk', '< 2.0'
 
-ruby ENV['CUSTOM_RUBY_VERSION']|| '2.2.3'
