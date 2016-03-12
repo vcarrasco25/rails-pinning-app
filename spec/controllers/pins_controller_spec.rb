@@ -40,7 +40,7 @@ RSpec.describe PinsController do
         slug: "rails-wizard", 
         text: "A fun and helpful Rails Resource",
         category_id: "rails",
-        image: "http://placebear.com/75/75"
+        image: "https://placebear.com/75/75"
       }    
     end
     
@@ -94,7 +94,7 @@ RSpec.describe PinsController do
       @slug = "rails-wizard"
       @text = "A fun and helpful Rails Resource"
       @category_id = "rails"
-      @image = "http://placebear.com/75/75"
+      @image = "https://placebear.com/75/75"
       @pin = Pin.create(title: @title, url: @url, slug: @slug, text: @text, category_id: @category_id, image: @image)
     end
 
@@ -134,7 +134,7 @@ RSpec.describe PinsController do
       @slug = "rails-wizard"
       @text = "A fun and helpful Rails Resource"
       @category_id = "rails"
-      @image = "http://placebear.com/75/75"
+      @image = "https://placebear.com/75/75"
       @pin = Pin.create(title: @title, url: @url, slug: @slug, text: @text, category_id: @category_id, image: @image)
     end
 
